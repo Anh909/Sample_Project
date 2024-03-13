@@ -7,8 +7,22 @@ require_once './commons/connect-db.php';
 
 // Require tất cả các file có trong controllers và models
 require_file(PATH_CONTROLLER);
-homeIndex();
-echo '<br>';
-abcIndex();
+require_file(PATH_MODEL);
+
+// homeIndex();
+// echo '<br>';
+// abcIndex();
+// echo '<br>';
+// getAllUser();
+
+
+//Điều hướng
+$act = $_GET['act'] ?? '/';
+
+match($act){
+    '/' => homeIndex(),
+    'dssp' => 'Đây là Danh Sách Sản Phẩm',
+    'dh' => 'Đây là Đơn Hàng'
+};
 
 require_once './commons/disconnect-db.php';

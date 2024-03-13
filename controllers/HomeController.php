@@ -1,4 +1,5 @@
 <?php
- function homeIndex() {
-    echo "Đây là Trang Chủ";
- }
+function homeIndex()
+{
+   require_once PATH_VIEW . 'home.php';
+}
