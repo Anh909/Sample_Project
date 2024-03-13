@@ -1,4 +1,4 @@
 <?php
- function index() {
+ function homeIndex() {
     echo "Đây là Trang Chủ";
  }
